@@ -1,0 +1,31 @@
+.imageBank{
+    height: 500px;
+    width: 600px;
+    border-radius: 10%;
+}
+
+.myHome{
+    margin: 26px;
+}
+
+
+.appliBankImage{
+    height: 300px;
+    width: 400px;
+    border-radius: 10%;
+    margin-top: 20px;
+}
+
+h4, h5{
+    /* color: #BAA896; */
+    color: brown;
+}
+
+.myHome2{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 100px;
+}
+

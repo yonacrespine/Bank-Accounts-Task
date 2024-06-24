@@ -1,0 +1,20 @@
+.card-body{
+    text-align: left;
+    border-radius: 10%;
+    border-color: brown;
+}
+
+.card-text{
+    color: rgb(66, 61, 61);
+}
+h5{
+    color: brown;
+}
+
+.card{
+    
+    margin: auto;
+    margin-top: 20px;
+    background-color: rgb(249, 245, 237);
+
+}

@@ -1,0 +1,102 @@
+
+<form class="form" (ngSubmit)="submit(ngForm)" #ngForm="ngForm">
+    <p class="title">New operation</p>
+    
+        <div class="flex">
+        <label>
+            <input  placeholder="" type="number" class="input" value="accountNumber" name="accountNumber" [(ngModel)]="operation.accountNumber" required  #accountNumberBox="ngModel" >
+            <span>Account Number</span>
+            <span 
+            class="err" 
+            *ngIf="accountNumberBox.errors?.['required'] && accountNumberBox.touched">
+            Missing Account Number
+            </span>
+            
+           
+        </label>
+
+        <label>
+         
+            <select required="" placeholder="" type="text" class="input"  name="typeOperation" required [(ngModel)]="operation.typeOperation"   #operationTypeBox="ngModel" >
+            <option  disabled value="">Select operation</option>
+            <option value="withdrawal">Withdrawal</option>
+            <option value="deposit">Deposit</option>
+            <option value="loan">Loan</option>
+            </select>
+            <span 
+            class="err" 
+            *ngIf="operationTypeBox.errors?.['required'] && operationTypeBox.touched">
+            Missing Operation type
+            </span>
+
+            <span>Type Operation</span>
+        </label>
+    </div>  
+            
+    <label>
+        <input  placeholder="" type="number" class="input" value="amount" name="amount" [(ngModel)]="operation.amount" required     #amountBox="ngModel"   min="100" 
+        max="5000">
+        <span>Amount</span>
+        <span 
+        class="err" 
+        *ngIf="amountBox.errors?.['required'] && amountBox.touched">
+        Missing Amount
+        </span>
+        <span
+        class="err" 
+        *ngIf="amountBox.errors?.['min'] && amountBox.touched">
+        Amount must be more then 100
+        </span>
+        <span 
+        class="err" 
+        *ngIf="amountBox.errors?.['max'] && amountBox.touched">
+        Amount can't be more than 5000
+        </span>
+    </label> 
+        
+    <div class="loan" *ngIf="operation.typeOperation==='loan' ">
+    <label>
+        <input placeholder="" type="number" class="input" name="interest" [(ngModel)]="operation.interest" required    #interestBox="ngModel"  min="0" 
+        max="50"> 
+        <span>Interest</span>
+        <span 
+        class="err" 
+        *ngIf="interestBox.errors?.['required'] && interestBox.touched">
+        Missing Interest
+        </span>
+        <span 
+        class="err" 
+        *ngIf="interestBox.errors?.['min'] && interestBox.touched">
+        Interest can't be Negative
+        </span>
+        <span 
+        class="err" 
+        *ngIf="interestBox.errors?.['max'] && interestBox.touched">
+        Interest can't be more that 50%
+        </span>
+    </label>
+    <label>
+        <input  placeholder="" type="number" class="input" name="payments" [(ngModel)]="operation.payments" required   #paymentsBox="ngModel" 
+        min="1" 
+        max="12">
+        <span>Payments</span>
+        <span 
+        class="err" 
+        *ngIf="paymentsBox.errors?.['required'] && paymentsBox.touched">
+        Missing Payments
+        </span>
+        <span 
+        class="err" 
+        *ngIf="paymentsBox.errors?.['min'] && paymentsBox.touched">
+        Payments must be between 1 - 12
+        </span>
+        <span 
+        class="err" 
+        *ngIf="paymentsBox.errors?.['max'] && paymentsBox.touched">
+        Payments must be between 1 - 12
+        </span>
+    </label>
+    </div>
+    <button class="submit">Add</button>
+  
+</form>

@@ -1,0 +1,14 @@
+
+<div class="card" style="width: 22rem;">
+   
+    <div class="card-body">
+      <h5 class="card-title"><img src="../../../../assets/images/credit-card.png" alt="" style="height: 40px;width: 40px;"/> Account Number: {{operation.accountNumber}}</h5>
+      <p class="card-text">📆 Date & Time: {{getTime(operation)}}</p>
+      <p class="card-text">🪙 Type of operation: {{operation.typeOperation}}</p>
+      <p class="card-text">💵 Amount: {{operation.amount}}$</p>
+
+      <p *ngIf="operation.typeOperation==='loan' ">Interest: {{operation.interest}}%</p>
+      <p *ngIf="operation.typeOperation==='loan' ">payments: {{operation.payments}}</p>
+     
+    </div>
+  </div>

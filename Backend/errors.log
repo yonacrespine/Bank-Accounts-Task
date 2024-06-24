@@ -1,0 +1,48 @@
+Time: Sun Jun 02 2024 18:31:38 GMT+0300 (heure d’été d’Israël)
+Message: db already exists with different case already have: [BankAccounts] trying to create [bankAccounts]
+Stack: MongoServerError: db already exists with different case already have: [BankAccounts] trying to create [bankAccounts]
+    at InsertOneOperation.execute (C:\Users\yonab\Bureau\Yona\FullStackYona\Bank-Accounts-Task\Backend\node_modules\mongodb\src\operations\insert.ts:83:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async executeOperation (C:\Users\yonab\Bureau\Yona\FullStackYona\Bank-Accounts-Task\Backend\node_modules\mongodb\src\operations\execute_operation.ts:181:12)
+---------------------------------------
+
+Time: Sun Jun 02 2024 18:34:41 GMT+0300 (heure d’été d’Israël)
+Message: BankAccountModel validation failed: interest: To long interest
+Stack: undefined
+---------------------------------------
+
+Time: Sun Jun 02 2024 18:36:31 GMT+0300 (heure d’été d’Israël)
+Message: BankAccountModel validation failed: interest: To long interest
+Stack: undefined
+---------------------------------------
+
+Time: Sun Jun 02 2024 18:54:15 GMT+0300 (heure d’été d’Israël)
+Message: BankAccountModel validation failed: accountNumber: Missing account Number
+Stack: undefined
+---------------------------------------
+
+Time: Sun Jun 02 2024 19:00:56 GMT+0300 (heure d’été d’Israël)
+Message: BankAccountModel validation failed: amount: Missing somme , typeOperation: Missing type of operation, accountNumber: Missing account Number
+Stack: undefined
+---------------------------------------
+
+Time: Sun Jun 02 2024 19:13:35 GMT+0300 (heure d’été d’Israël)
+Message: BankAccountModel validation failed: accountNumber: Missing account Number
+Stack: undefined
+---------------------------------------
+
+Time: Sun Jun 02 2024 19:14:51 GMT+0300 (heure d’été d’Israël)
+Message: BankAccountModel validation failed: accountNumber: Missing account Number
+Stack: undefined
+---------------------------------------
+
+Time: Sun Jun 02 2024 19:16:44 GMT+0300 (heure d’été d’Israël)
+Message: BankAccountModel validation failed: accountNumber: Missing account Number
+Stack: undefined
+---------------------------------------
+
+Time: Sun Jun 02 2024 19:19:30 GMT+0300 (heure d’été d’Israël)
+Message: BankAccountModel validation failed: accountNumber: Missing account Number
+Stack: undefined
+---------------------------------------
+
